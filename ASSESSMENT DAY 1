@@ -1,0 +1,137 @@
+JS TEJKUMAR 191921049
+Assessment-1
+
+Set I
+
+1. Write a R program to create a vector of a specified type and length. Create
+vector of numeric, complex, logical and character types of length 6 with
+your own examples. print the vector, type, and length.
+Use this vector for Below program
+x = c(10, 20, 30, 20, 20, 25, 9, 26,38,40)
+solution:
+num_vec &lt;- c(1, 2, 3, 4, 5, 6)
+cat(&quot;Numeric vector:&quot;, num_vec, &quot;\nType:&quot;, typeof(num_vec), &quot;\nLength:&quot;, length(num_vec),
+&quot;\n&quot;)
+comp_vec &lt;- c(1+2i, 2+4i, 3+6i, 4+8i, 5+10i, 6+12i)
+cat(&quot;Complex vector:&quot;, comp_vec, &quot;\nType:&quot;, typeof(comp_vec), &quot;\nLength:&quot;, length(comp_vec),
+&quot;\n&quot;)
+log_vec &lt;- c(TRUE, FALSE, TRUE, TRUE, FALSE, FALSE)
+cat(&quot;Logical vector:&quot;, log_vec, &quot;\nType:&quot;, typeof(log_vec), &quot;\nLength:&quot;, length(log_vec), &quot;\n&quot;)
+char_vec &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;kiwi&quot;, &quot;watermelon&quot;)
+cat(&quot;Character vector:&quot;, char_vec, &quot;\nType:&quot;, typeof(char_vec), &quot;\nLength:&quot;, length(char_vec),
+&quot;\n&quot;)
+x = c(10, 20, 30, 20, 20, 25, 9, 26, 38, 40)
+cat(&quot;Mean of x:&quot;, mean(x), &quot;\n&quot;)
+
+output:
+Numeric vector: 1 2 3 4 5 6
+Type: double
+Length: 6
+
+Complex vector: 1+2i 2+4i 3+6i 4+8i 5+10i 6+12i
+Type: complex
+Length: 6
+Logical vector: TRUE FALSE TRUE TRUE FALSE FALSE
+Type: logical
+Length: 6
+Character vector: apple banana orange grape kiwi watermelon
+Type: character
+Length: 6
+Mean of x: 23.8
+
+2. Write a R program to find Sum, Mean and Product of a Vector.
+Solution:
+my_vector &lt;- c(1, 2, 3, 4, 5)
+sum_of_vector &lt;- sum(my_vector)
+mean_of_vector &lt;- mean(my_vector)
+product_of_vector &lt;- prod(my_vector)
+cat(&quot;Sum of vector: &quot;, sum_of_vector, &quot;\n&quot;)
+cat(&quot;Mean of vector: &quot;, mean_of_vector, &quot;\n&quot;)
+cat(&quot;Product of vector: &quot;, product_of_vector, &quot;\n&quot;)
+
+output:
+Sum of vector: 15
+Mean of vector: 3
+Product of vector: 120
+
+3. Write a R program to sort a Vector in ascending order without sort key word.
+Solution:
+x = c(10, 22, 50, 15, 9, 6)
+
+print(&quot;Original Vectors:&quot;)
+print(x)
+print(&quot;Sort in ascending order:&quot;)
+print(sort(x))
+print(&quot;Sort in descending order:&quot;)
+print(sort(x, decreasing=TRUE))
+
+output:
+[1] &quot;Original Vectors:&quot;
+[1] 10 22 50 15 9 6
+[1] &quot;Sort in ascending order:&quot;
+[1] 6 9 10 15 22 50
+[1] &quot;Sort in descending order:&quot;
+[1] 50 22 15 10 9 6
+
+4. Write a R program to find highest value in a given vector.
+Solution:
+x = c(100, 200, 31, 25, 21, 25, 9, 76)
+print(&quot;Original Vectors:&quot;)
+print(x)
+print(&quot;second highest value in given vector:&quot;)
+g= length(x)
+print(sort(x, partial = g-1)[g-1])
+
+Output:
+[1] &quot;Original Vectors:&quot;
+[1]100 200 31 25 21 25 9 76
+[1] &quot;second highest value in given vector:&quot;
+[1] 100
+
+5. Write a R program to add a new item g4 = &amp;quot;C++&amp;quot; to a given list.
+Sample list: (g1 = 5:10, g2 = &amp;quot;R Programming&amp;quot;, g3 = &amp;quot;HTML&amp;quot;)
+Solution:
+g1 &lt;- 5:10
+g2 &lt;- &quot;R Programming&quot;
+g3 &lt;- &quot;HTML&quot;
+mylist &lt;- list(g1, g2, g3)
+g4 &lt;- &quot;C++&quot;
+mylist[[&quot;g4&quot;]] &lt;- g4
+print(mylist)
+
+output:
+[[1]]
+[1]5678910[[2]]
+[1]&quot;R Programming&quot;[[3]]
+[1]&quot;HTML&quot;$g4
+[1]&quot;C++&quot;
+
+6. Write a R program to extract all elements except the third element of the
+first vector of a given list.
+Sample list: (g1 = 5:10, g2 = &amp;quot;R Programming&amp;quot;, g3 = &amp;quot;HTML&amp;quot;)
+Solution:
+g1 &lt;- 5:10
+g2 &lt;- &quot;R Programming&quot;
+g3 &lt;- &quot;HTML&quot;
+mylist &lt;- list(g1, g2, g3)
+new_vector &lt;- mylist[[1]][-3]
+print(new_vector)
+
+output:
+[1] 5 6 89 10
+
+7. solution
+mons_v &lt;- c(&quot;March&quot;, &quot;April&quot;, &quot;January&quot;, &quot;November&quot;, &quot;January&quot;, &quot;September&quot;,
+&quot;October&quot;,&quot;September&quot;, &quot;November&quot;, &quot;August&quot;, &quot;February&quot;, &quot;January&quot;, &quot;November&quot;, &quot;November&quot;,
+&quot;February&quot;, &quot;May&quot;, &quot;August&quot;, &quot;February&quot;, &quot;July&quot;, &quot;December&quot;, &quot;August&quot;, &quot;August&quot;, &quot;September&quot;,
+&quot;November&quot;, &quot;September&quot;, &quot;February&quot;, &quot;April&quot;)
+months_factor &lt;- factor(mons_v, ordered = TRUE,
+levels = c(&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;,
+&quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;))
+months_factor
+Output:
+[1] March April January November January September October September November
+[10] August February January November November February May August February
+[19] July December August August September November September February April
+12 Levels: January &lt; February &lt; March &lt; April &lt; May &lt; June &lt; July &lt; August &lt; September &lt; october &lt;
+December
